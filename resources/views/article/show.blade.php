@@ -8,7 +8,7 @@
         >
     </div>
 
-    <div class="relative -top-32 max-w-4xl mx-auto p-20 space-y-10 bg-neutral-200">
+    <div class="lg:relative lg:-top-32 max-w-4xl mx-auto p-4 sm:p-6 md:p-10 lg:p-20 space-y-4 md:space-y-6 lg:space-y-10 bg-neutral-200">
 
         <div class="flex space-x-4">
             <div class="text-sm text-neutral-500">{{ $article['news_site'] }}</div>
@@ -36,7 +36,7 @@
         </div>
         
 
-        <h1 class="font-serif font-black text-6xl">{{ $article['title'] }}</h1>
+        <h1 class="font-serif font-black text-2xl sm:text-4xl lg:text-5xl xl:text-6xl">{{ $article['title'] }}</h1>
 
         <p>{{ $article['summary'] }}</p>
 
