@@ -6,24 +6,50 @@ Aplikacja napisana jako szybkie zadanie testowe dla jednej z firm.
 
 ## Jak uruchomić aplikację?
 
-Po sklonowaniu wydaj następujące komendy w terminalu:
+Po sklonowaniu edytuj plik env.example i zapisz go jako .env
+
+*(Aplikacja nie korzysta z bazy danych, nie musisz więc jej konfigurować.)*
+
+Następnie wydaj następujące komendy w terminalu:
 ```
 composer install
 ```
-aby uzyć docker'a:
 ```
-./vendor/bin/sail up
+php artisan key:generate
 ```
-lub po prostu:
 ```
 php artisan serve
 ```
-poczekaj aż projekt się zbuduje i...
+W drugim terminalu wydaj następujące komendy:
 ```
-npm run dev
+npm install
 ```
-lub
 ```
 npm run build
 ```
-Aplikacja nie korzysta z bazy danych więc nie musisz jej konfigurować.
+
+## Jak uruchomić aplikację za pomocą Docker'a
+Po sklonowaniu edytuj plik env.example i zapisz go jako .env
+
+*(Aplikacja nie korzysta z bazy danych, nie musisz więc jej konfigurować.)*
+
+Następnie wydaj następujące komendy w terminalu:
+```
+composer install
+```
+```
+php artisan key:generate
+```
+```
+./vendor/bin/sail up
+```
+Poczekaj aż aplikacja się zbuduje i w drugim terminalu wydaj komendy:
+```
+./vendor/bin/sail bash
+```
+```
+npm install
+```
+```
+npm run build
+```
